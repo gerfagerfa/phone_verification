@@ -8,6 +8,9 @@ class ContinueWithPhone extends StatefulWidget {
 }
 
 class _ContinueWithPhoneState extends State<ContinueWithPhone> {
+
+  String phoneNumber = "";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -110,7 +113,7 @@ class _ContinueWithPhoneState extends State<ContinueWithPhone> {
                           ),
 
                           Text(
-                            "8 5987 564 77",
+                            phoneNumber,
                             style: TextStyle(
                               fontSize: 24,
                               fontWeight: FontWeight.bold,
@@ -126,7 +129,7 @@ class _ContinueWithPhoneState extends State<ContinueWithPhone> {
                         onTap: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => VerifyPhone()),
+                            MaterialPageRoute(builder: (context) => VerifyPhone(phoneNumber: phoneNumber)),
                           );
                         },
                         child: Container(
@@ -154,7 +157,18 @@ class _ContinueWithPhoneState extends State<ContinueWithPhone> {
               ),
             ),
 
-            NumericPad(),
+            NumericPad(
+              onNumberSelected: (value) {
+                setState(() {
+                  if(value != -1){
+                    phoneNumber = phoneNumber + value.toString();
+                  }
+                  else{
+                    phoneNumber = phoneNumber.substring(0, phoneNumber.length - 1);
+                  }                  
+                });
+              },
+            ),
 
           ],
         )

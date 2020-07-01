@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 
 class NumericPad extends StatelessWidget {
+
+  final Function(int) onNumberSelected;
+
+  NumericPad({@required this.onNumberSelected});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -69,22 +74,27 @@ class NumericPad extends StatelessWidget {
 
   Widget buildNumber(int number) {
     return Expanded(
-      child: Padding(
-        padding: EdgeInsets.all(10),
-        child: Container(
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.all(
-              Radius.circular(15),
+      child: GestureDetector(
+        onTap: () {
+          onNumberSelected(number);
+        },
+        child: Padding(
+          padding: EdgeInsets.all(10),
+          child: Container(
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.all(
+                Radius.circular(15),
+              ),
             ),
-          ),
-          child: Center(
-            child: Text(
-              number.toString(),
-              style: TextStyle(
-                fontSize: 28,
-                fontWeight: FontWeight.bold,
-                color: Color(0xFF1F1F1F),
+            child: Center(
+              child: Text(
+                number.toString(),
+                style: TextStyle(
+                  fontSize: 28,
+                  fontWeight: FontWeight.bold,
+                  color: Color(0xFF1F1F1F),
+                ),
               ),
             ),
           ),
@@ -95,20 +105,25 @@ class NumericPad extends StatelessWidget {
 
   Widget buildBackspace() {
     return Expanded(
-      child: Padding(
-        padding: EdgeInsets.all(10),
-        child: Container(
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.all(
-              Radius.circular(15),
+      child: GestureDetector(
+        onTap: () {
+          onNumberSelected(-1);
+        },
+        child: Padding(
+          padding: EdgeInsets.all(10),
+          child: Container(
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.all(
+                Radius.circular(15),
+              ),
             ),
-          ),
-          child: Center(
-            child: Icon(
-              Icons.backspace,
-              size: 28,
-              color: Color(0xFF1F1F1F),
+            child: Center(
+              child: Icon(
+                Icons.backspace,
+                size: 28,
+                color: Color(0xFF1F1F1F),
+              ),
             ),
           ),
         ),
