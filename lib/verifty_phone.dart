@@ -31,7 +31,6 @@ class _VerifyPhoneState extends State<VerifyPhone> {
         ),
         title: Text(
           "Verify phone",
-          textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.bold,
@@ -59,7 +58,6 @@ class _VerifyPhoneState extends State<VerifyPhone> {
                       padding: EdgeInsets.symmetric(vertical: 14),
                       child: Text(
                         "Code is sent to " + widget.phoneNumber,
-                        textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 22,
                           color: Color(0xFF818181),
@@ -90,7 +88,6 @@ class _VerifyPhoneState extends State<VerifyPhone> {
                           
                           Text(
                             "Didn't recieve code? ",
-                            textAlign: TextAlign.center,
                             style: TextStyle(
                               fontSize: 18,
                               color: Color(0xFF818181),
@@ -107,7 +104,6 @@ class _VerifyPhoneState extends State<VerifyPhone> {
                             },
                             child: Text(
                               "Request again",
-                              textAlign: TextAlign.center,
                               style: TextStyle(
                                 fontSize: 18,
                               ),

@@ -1,7 +1,7 @@
 # Sign Up with Phone Verification App UI in Flutter
 Source Code - Enjoy !
 
-Nice, clean and modern Sign Up with Phone Verification App UI in Flutter
+Nice, clean and modern Sign Up with Phone Verification Design App UI in Flutter
 
 # Most Important Social Media
 YouTube: https://www.youtube.com/channel/UCQheyq1vvmd0RaKv1EDyGfA

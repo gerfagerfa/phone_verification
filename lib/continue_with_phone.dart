@@ -22,7 +22,6 @@ class _ContinueWithPhoneState extends State<ContinueWithPhone> {
         ),
         title: Text(
           "Continue with phone",
-          textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.bold,
@@ -66,7 +65,6 @@ class _ContinueWithPhoneState extends State<ContinueWithPhone> {
                       padding: EdgeInsets.symmetric(vertical: 14, horizontal: 64),
                       child: Text(
                         "You'll receive a 4 digit code to verify next.",
-                        textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 22,
                           color: Color(0xFF818181),
