@@ -43,8 +43,7 @@ class _ContinueWithPhoneState extends State<ContinueWithPhone> {
                   gradient: LinearGradient(
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
-                    stops: [0.7, 0.9],
-                    colors: [
+                    List: [
                       Color(0xFFFFFFFF),
                       Color(0xFFF7F7F7),
                     ],
